@@ -1,180 +1,217 @@
+/* ---------------------------
+   Style Web Tunas Remaja Kriyan
+   --------------------------- */
+
 /* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
 }
 
 /* Header */
 header {
-  background: linear-gradient(90deg, #e0f2fe, #f0f9ff);
-  color: #1e3a8a;
-  text-align: center;
-  padding: 15px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-.logo-container {
+  background: rgba(10, 25, 47, 0.95); /* navy transparan */
+  color: #fff;
+  padding: 15px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.logo {
-  height: 50px;
-}
-.logo.garuda {
-  height: 60px;
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.title h1 {
-  font-size: 24px;
-  margin-bottom: 5px;
-}
-.title p {
-  font-size: 13px;
-  color: #374151;
+header .logo img {
+  height: 45px;
 }
 
 header nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 10px;
-}
-header nav a {
-  text-decoration: none;
-  color: #1e3a8a;
-  font-weight: 600;
-  transition: 0.3s;
-  font-size: 15px;
-}
-header nav a:hover {
-  color: #2563eb;
+  gap: 25px;
 }
 
-/* Hero */
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #f1c40f; /* emas */
+}
+
+/* Hero Section */
 .hero {
-  background: url("hero-bg.jpg") center/cover no-repeat;
-  color: #1e3a8a;
+  height: 85vh;
+  background: linear-gradient(rgba(10,25,47,0.8), rgba(10,25,47,0.8)), 
+              url('https://source.unsplash.com/1600x900/?youth,community') center/cover no-repeat;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 80px 20px;
+  padding: 0 20px;
 }
-.hero h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #f1c40f; /* emas */
 }
+
 .hero p {
-  font-size: 16px;
-  color: #334155;
+  font-size: 1.2rem;
+  max-width: 700px;
 }
 
 /* Section */
-.section {
-  padding: 40px 20px;
-  text-align: center;
-}
-.section h2 {
-  font-size: 24px;
-  margin-bottom: 15px;
-  color: #1e3a8a;
-}
-.section p {
-  max-width: 750px;
-  margin: auto;
-  line-height: 1.6;
-  font-size: 15px;
-  color: #374151;
+section {
+  padding: 70px 10%;
 }
 
-/* Cards */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-  margin-top: 25px;
-}
-.card {
-  background: white;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
-}
-.card:hover {
-  transform: translateY(-5px);
-}
-.card h3 {
-  margin-bottom: 8px;
-  color: #1e3a8a;
-  font-size: 18px;
-}
-.card p {
-  font-size: 14px;
-  color: #374151;
+section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #0a192f;
+  position: relative;
 }
 
-/* Album Foto */
-.album {
-  margin-top: 40px;
-  text-align: center;
+section h2::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: #f1c40f;
+  display: block;
+  margin: 10px auto;
+  border-radius: 2px;
 }
-.album h3 {
-  font-size: 20px;
-  color: #1e3a8a;
-  margin-bottom: 15px;
-}
-.gallery {
+
+/* Kegiatan */
+.kegiatan {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 10px;
-  margin-bottom: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
 }
-.gallery img {
+
+.kegiatan .card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.kegiatan .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.kegiatan .card img {
   width: 100%;
-  border-radius: 10px;
-  height: 120px;
+  height: 180px;
   object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
 }
-.gallery img:hover {
-  transform: scale(1.03);
+
+.kegiatan .card-body {
+  padding: 20px;
 }
-.download a {
+
+.kegiatan .card-body h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #0a192f;
+}
+
+.kegiatan .card-body p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.kegiatan .card-body a {
   display: inline-block;
-  padding: 8px 14px;
-  background: #2563eb;
-  color: white;
-  font-weight: 500;
-  border-radius: 6px;
+  padding: 8px 15px;
+  background: #0a192f;
+  color: #fff;
+  border-radius: 8px;
   text-decoration: none;
-  font-size: 14px;
+  transition: background 0.3s;
+  font-size: 0.9rem;
 }
-.download a:hover {
-  background: #1e40af;
+
+.kegiatan .card-body a:hover {
+  background: #f1c40f;
+  color: #0a192f;
+  font-weight: 600;
 }
 
 /* Kontak */
-.kontak a {
-  color: #2563eb;
-  font-weight: bold;
-  text-decoration: none;
+.kontak {
+  background: #0a192f;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
 }
+
+.kontak p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.kontak a {
+  color: #f1c40f;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
 .kontak a:hover {
-  text-decoration: underline;
+  color: #fff;
 }
 
 /* Footer */
 footer {
-  background: #1e3a8a;
-  color: white;
-  padding: 12px;
+  background: #081426;
+  color: #ccc;
   text-align: center;
-  font-size: 13px;
+  padding: 18px 10px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #f1c40f;
+  text-decoration: none;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  section {
+    padding: 50px 8%;
+  }
 }
