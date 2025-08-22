@@ -4,91 +4,132 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tunas Remaja Kriyan</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif;}
+    body {background: #f4f6f9; color: #333;}
+    header {
+      background: rgba(10, 25, 47, 0.95);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 8%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header img {height: 40px; margin-right: 8px;}
+    header .logo {display: flex; align-items: center; font-weight: bold; font-size: 20px;}
+    nav a {
+      color: white; margin: 0 12px; text-decoration: none; font-size: 15px; font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover {color: #f4c542;}
+    .hero {
+      height: 60vh;
+      background: linear-gradient(rgba(10,25,47,0.6), rgba(10,25,47,0.6)), url('https://source.unsplash.com/1600x900/?youth,community') center/cover no-repeat;
+      display: flex; align-items: center; justify-content: center;
+      color: white; text-align: center; padding: 20px;
+    }
+    .hero h1 {font-size: 42px; margin-bottom: 10px;}
+    .hero p {font-size: 18px; opacity: 0.9;}
+    section {padding: 60px 8%;}
+    h2 {text-align: center; font-size: 28px; margin-bottom: 40px; color: #0a192f;}
+    .kegiatan {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;
+    }
+    .card {
+      background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      overflow: hidden; transition: 0.3s;
+    }
+    .card:hover {transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.12);}
+    .card img {width: 100%; height: 180px; object-fit: cover;}
+    .card .content {padding: 16px;}
+    .card h3 {font-size: 20px; color: #0a192f; margin-bottom: 8px;}
+    .card p {font-size: 14px; color: #555; margin-bottom: 12px;}
+    .card a {
+      display: inline-block; padding: 8px 14px; background: #0a192f; color: white;
+      border-radius: 6px; text-decoration: none; font-size: 14px; transition: 0.3s;
+    }
+    .card a:hover {background: #f4c542; color: #0a192f;}
+    .kontak {text-align: center;}
+    .kontak p {margin: 8px 0; font-size: 15px;}
+    footer {
+      background: #0a192f; color: white; text-align: center; padding: 20px; margin-top: 40px;
+    }
+    @media(max-width:768px){
+      .hero h1{font-size: 28px;}
+      header nav{display:none;}
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <div class="logo-container">
-      <img src="logo-tunas.png" alt="Logo Tunas Remaja" class="logo">
-      <div class="title">
-        <h1>Tunas Remaja Kriyan</h1>
-        <p>DK Kriyan, Babadan, Karangdowo, Klaten</p>
-      </div>
-      <img src="garuda.png" alt="Garuda Indonesia" class="logo garuda">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Garuda_Pancasila_Emblem.png/120px-Garuda_Pancasila_Emblem.png" alt="Garuda">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Scouting_Fleur-de-lis.svg/120px-Scouting_Fleur-de-lis.svg.png" alt="Tunas">
+      Tunas Remaja Kriyan
     </div>
     <nav>
-      <ul>
-        <li><a href="#profil">Profil</a></li>
-        <li><a href="#kegiatan">Kegiatan</a></li>
-        <li><a href="#kontak">Kontak</a></li>
-      </ul>
+      <a href="#profil">Profil</a>
+      <a href="#kegiatan">Kegiatan</a>
+      <a href="#kontak">Kontak</a>
     </nav>
   </header>
 
-  <!-- Hero -->
   <section class="hero">
-    <div class="hero-text">
-      <h2>Selamat Datang di Karang Taruna Tunas Remaja</h2>
-      <p>Tempat berkumpul, berkarya, dan berkontribusi untuk desa kita.</p>
+    <div>
+      <h1>Karang Taruna Tunas Remaja</h1>
+      <p>DK Kriyan, Babadan, Karangdowo, Klaten</p>
     </div>
   </section>
 
-  <!-- Profil -->
-  <section id="profil" class="section">
+  <section id="profil">
     <h2>Profil</h2>
-    <p>
-      Karang Taruna <b>Tunas Remaja</b> DK Kriyan, Babadan, Karangdowo, Klaten 
-      adalah organisasi kepemudaan yang bergerak dalam bidang sosial, budaya, 
-      dan kegiatan masyarakat. Kami hadir untuk memajukan desa dengan semangat 
-      gotong royong dan persaudaraan.
+    <p style="text-align:center; max-width:700px; margin: auto;">
+      Karang Taruna Tunas Remaja adalah wadah generasi muda di DK Kriyan yang bergerak dalam bidang sosial, olahraga, keagamaan, dan kebersamaan. 
+      Visi kami adalah menciptakan pemuda yang aktif, kreatif, dan bermanfaat bagi masyarakat.
     </p>
   </section>
 
-  <!-- Kegiatan -->
-  <section id="kegiatan" class="section">
+  <section id="kegiatan">
     <h2>Kegiatan</h2>
-    <div class="cards">
+    <div class="kegiatan">
       <div class="card">
-        <h3>Lomba</h3>
-        <p>Berbagai lomba seru untuk mempererat kebersamaan pemuda dan masyarakat.</p>
+        <img src="https://source.unsplash.com/600x400/?competition,game" alt="Lomba">
+        <div class="content">
+          <h3>Lomba 2025</h3>
+          <p>Berbagai lomba kreatif & olahraga antar warga untuk mempererat persaudaraan.</p>
+          <a href="https://drive.google.com/drive/folders/1V27ewNX5XR0MV-2hN-hKZK-AvtRM0sWv" target="_blank">Download Foto</a>
+        </div>
       </div>
       <div class="card">
-        <h3>Nuzulul Qur'an 2025</h3>
-        <p>Peringatan Nuzulul Qur’an dengan tausiyah dan kegiatan keagamaan.</p>
+        <img src="https://source.unsplash.com/600x400/?islam,mosque" alt="Nuzulul Quran">
+        <div class="content">
+          <h3>Nuzulul Quran 2025</h3>
+          <p>Peringatan Nuzulul Quran dengan pengajian & kegiatan keagamaan bersama warga.</p>
+          <a href="https://drive.google.com/drive/folders/1V27ewNX5XR0MV-2hN-hKZK-AvtRM0sWv" target="_blank">Download Foto</a>
+        </div>
       </div>
       <div class="card">
-        <h3>Jalan Sehat 2025</h3>
-        <p>Kegiatan jalan sehat kembali digelar dengan semangat persatuan dan kebugaran.</p>
+        <img src="https://source.unsplash.com/600x400/?walking,health" alt="Jalan Sehat">
+        <div class="content">
+          <h3>Jalan Sehat 2025</h3>
+          <p>Kegiatan olahraga bersama masyarakat untuk menjaga kesehatan & kebersamaan.</p>
+          <a href="https://drive.google.com/drive/folders/1V27ewNX5XR0MV-2hN-hKZK-AvtRM0sWv" target="_blank">Download Foto</a>
+        </div>
       </div>
-    </div>
-
-    <!-- Album Foto -->
-    <div class="album">
-      <h3>Album Foto Kegiatan</h3>
-      <div class="gallery">
-        <img src="foto1.jpg" alt="Foto kegiatan 1">
-        <img src="foto2.jpg" alt="Foto kegiatan 2">
-        <img src="foto3.jpg" alt="Foto kegiatan 3">
-      </div>
-      <p class="download">
-        📂 <a href="https://drive.google.com/drive/folders/1V27ewNX5XR0MV-2hN-hKZK-AvtRM0sWv" target="_blank">
-          Download Foto Lengkap
-        </a>
-      </p>
     </div>
   </section>
 
-  <!-- Kontak -->
-  <section id="kontak" class="section kontak">
+  <section id="kontak" class="kontak">
     <h2>Kontak</h2>
-    <p>Email: <a href="mailto:tunasremaja.kriyan@gmail.com">tunasremaja.kriyan@gmail.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/tunasremaja.kriyan" target="_blank">@tunasremaja.kriyan</a></p>
+    <p>Email: tunasremaja.kriyan@gmail.com</p>
+    <p>Instagram: @tunasremaja</p>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 Karang Taruna Tunas Remaja | All Rights Reserved</p>
+    <p>&copy; 2025 Karang Taruna Tunas Remaja DK Kriyan. All Rights Reserved.</p>
   </footer>
 </body>
 </html>
