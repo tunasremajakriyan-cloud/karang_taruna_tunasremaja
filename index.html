@@ -9,16 +9,17 @@
 <body>
   <!-- Header -->
   <header>
-    <div class="header-left">
-      <img src="logo-tunas.png" alt="Logo Tunas Remaja" class="logo">
-      <div class="header-text">
+    <div class="logo">
+      <img src="logo.png" alt="Logo Tunas Remaja">
+      <div class="info">
         <h1>Tunas Remaja</h1>
         <p>Ikatan Muda Mudi Kriyan</p>
         <span>@tunasremaja.kriyan</span>
       </div>
     </div>
     <nav>
-      <ul>
+      <div class="menu-toggle">&#9776;</div>
+      <ul class="nav-links">
         <li><a href="#profil">Profil</a></li>
         <li><a href="#kegiatan">Kegiatan</a></li>
         <li><a href="#kontak">Kontak</a></li>
@@ -30,33 +31,31 @@
   <section id="profil" class="section">
     <h2>Profil</h2>
     <p>
-      Karang Taruna <b>Tunas Remaja</b> Dusun Kriyan, Babadan, Karangdowo, Klaten 
-      minangka wadah kreatifitas, kebersamaan, lan pembangunan pemuda ing masyarakat.
+      Karang Taruna <b>Tunas Remaja</b> merupakan wadah pemuda-pemudi Dukuh Kriyan,
+      Babadan, Karangdowo, Klaten yang aktif dalam kegiatan sosial, budaya, dan keagamaan.
     </p>
   </section>
 
   <!-- Kegiatan -->
   <section id="kegiatan" class="section">
     <h2>Kegiatan</h2>
-    <div class="cards">
-      <div class="card fade-in">
-        <img src="kegiatan1.jpg" alt="Lomba Anak-anak 2025">
+    <div class="kegiatan-grid">
+      <div class="card">
+        <img src="lomba.jpg" alt="Lomba">
         <h3>Lomba Anak-anak 2025</h3>
-        <p>Kegiatan lomba semarak HUT RI ke-80 kanggo anak-anak.</p>
+        <p>Berbagai perlombaan kreatif untuk anak-anak guna menyemarakkan acara HUT RI.</p>
         <a href="https://drive.google.com/drive/folders/1V27ewNX5XR0MV-2hN-hKZK-AvtRM0sWv" target="_blank" class="btn">Download Foto</a>
       </div>
-
-      <div class="card fade-in">
-        <img src="kegiatan2.jpg" alt="Nuzulul Qur'an 2025">
-        <h3>Nuzulul Qur'an 2025</h3>
-        <p>Peringatan Nuzulul Qur’an kanthi pengajian lan doa bersama.</p>
+      <div class="card">
+        <img src="nuzululquran.jpg" alt="Nuzulul Quran 2025">
+        <h3>Nuzulul Quran 2025</h3>
+        <p>Peringatan malam Nuzulul Quran dengan doa bersama dan ceramah agama.</p>
         <a href="https://drive.google.com/drive/folders/1V27ewNX5XR0MV-2hN-hKZK-AvtRM0sWv" target="_blank" class="btn">Download Foto</a>
       </div>
-
-      <div class="card fade-in">
-        <img src="kegiatan3.jpg" alt="Jalan Sehat 2025">
+      <div class="card">
+        <img src="jalansehat.jpg" alt="Jalan Sehat 2025">
         <h3>Jalan Sehat 2025</h3>
-        <p>Jalan sehat bareng warga kanggo guyub lan sehat bebarengan.</p>
+        <p>Kegiatan jalan sehat bersama warga sebagai wujud kebersamaan dan kesehatan.</p>
         <a href="https://drive.google.com/drive/folders/1V27ewNX5XR0MV-2hN-hKZK-AvtRM0sWv" target="_blank" class="btn">Download Foto</a>
       </div>
     </div>
@@ -66,13 +65,20 @@
   <section id="kontak" class="section">
     <h2>Kontak</h2>
     <p>Email: <a href="mailto:tunasremaja.kriyan@gmail.com">tunasremaja.kriyan@gmail.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/tunasremaja" target="_blank">@tunasremaja</a></p>
+    <p>Instagram: <a href="https://instagram.com/tunasremaja.kriyan" target="_blank">@tunasremaja.kriyan</a></p>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Tunas Remaja Kriyan.|| by wasisyoga
-      .</p>
+    <p>&copy; 2025 Tunas Remaja Kriyan. by wasisyoga.</p>
   </footer>
+
+  <script>
+    // Toggle menu di HP
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
