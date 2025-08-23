@@ -1,174 +1,129 @@
-/* RESET & BASE */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #f9f9f9;
   color: #333;
-  background-color: #fdfdfd;
-}
-a {
-  text-decoration: none;
-  transition: 0.3s ease;
 }
 
-/* NAVBAR */
-.navbar {
+/* HEADER */
+header {
+  background: white;
+  border-bottom: 2px solid #d4af37;
+  padding: 15px 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 8%;
-  background: #fff;
-  border-bottom: 2px solid #eee;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
+
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
 }
+
 .logo img {
-  width: 55px;
+  height: 60px;
 }
-.title h1 {
-  font-size: 1.4rem;
+
+.judul h1 {
+  margin: 0;
+  font-size: 22px;
   font-weight: 700;
-  color: #b8860b;
-}
-.title p {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #666;
-}
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-.navbar ul li a {
-  font-weight: 600;
   color: #333;
-  padding: 6px 12px;
-  border-radius: 8px;
 }
-.navbar ul li a:hover {
-  background: #b8860b;
-  color: #fff;
+
+.judul p {
+  margin: 2px 0 0;
+  font-size: 14px;
+  color: #777;
 }
 
 /* SECTION */
 section {
-  padding: 60px 10%;
+  padding: 40px 20px;
   text-align: center;
 }
+
 section h2 {
-  font-size: 2rem;
-  color: #b8860b;
-  margin-bottom: 15px;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #d4af37;
   position: relative;
 }
+
 section h2::after {
   content: "";
   display: block;
-  width: 60px;
+  width: 50px;
   height: 3px;
-  background: #b22222;
+  background: #d4af37;
   margin: 8px auto 0;
-}
-section p {
-  color: #444;
+  border-radius: 2px;
 }
 
-/* PROFILE */
-.profile p {
-  max-width: 700px;
-  margin: auto;
-  font-size: 1.05rem;
+/* PROFIL */
+.profil p {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
 }
 
 /* KEGIATAN */
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-.card {
+.kegiatan {
   background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  padding: 25px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-.card h3 {
-  color: #b22222;
-  margin-bottom: 12px;
-}
-.btn-download {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 22px;
-  border-radius: 30px;
-  background: linear-gradient(135deg, #b8860b, #ffcc00);
-  color: #fff;
-  font-weight: 600;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-}
-.btn-download:hover {
-  background: linear-gradient(135deg, #b22222, #ff4444);
+  border-radius: 12px;
+  margin: 20px;
+  padding: 30px 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* KONTAK */
-.kontak p {
-  font-size: 1.05rem;
-  margin: 8px 0;
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: 0.3s;
 }
-.kontak a {
-  color: #b22222;
-  font-weight: 600;
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
-.kontak a:hover {
-  color: #b8860b;
+
+.card h3 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.card p {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  background: #d4af37;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #b9962f;
 }
 
 /* FOOTER */
 footer {
-  background: #b22222;
-  color: #fff;
-  text-align: center;
+  background: #333;
+  color: #ddd;
   padding: 15px;
-  margin-top: 40px;
-  font-size: 0.9rem;
-}
-
-/* ANIMASI */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s forwards;
-}
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .navbar ul {
-    display: none;
-  }
-  .navbar {
-    flex-wrap: wrap;
-  }
+  text-align: center;
+  font-size: 14px;
 }
