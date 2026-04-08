@@ -5,76 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Karang Taruna Tunas Remaja</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="navbar">
-    <div class="logo">
-      <img src="logo.png" alt="Logo Tunas Remaja">
-      <div class="title">
-        <h1>Tunas Remaja</h1>
-        <p>Ikatan Muda Mudi Kriyan</p>
-      </div>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">
+    <img src="logo.png">
+    <h2>Tunas Remaja</h2>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#kegiatan">Kegiatan</a></li>
+      <li><a href="#galeri">Galeri</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Karang Taruna Tunas Remaja</h1>
+    <p>Berkarya untuk Desa, Membangun Generasi Muda</p>
+    <a href="#kegiatan" class="btn">Lihat Kegiatan</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>Tentang Kami</h2>
+  <p>
+    Karang Taruna Tunas Remaja adalah wadah pengembangan generasi muda di Kriyan.
+    Kami aktif dalam kegiatan sosial, keagamaan, dan pembangunan masyarakat.
+  </p>
+</section>
+
+<!-- KEGIATAN -->
+<section id="kegiatan" class="kegiatan">
+  <h2>Kegiatan</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Lomba</h3>
+      <p>Kegiatan lomba untuk meningkatkan kreativitas pemuda.</p>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#profile">Profil</a></li>
-        <li><a href="#kegiatan">Kegiatan</a></li>
-        <li><a href="#kontak">Kontak</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- PROFILE -->
-  <section id="profile" class="profile fade-in">
-    <h2>Profil Kami</h2>
-    <p>
-      Karang Taruna <b>Tunas Remaja</b> merupakan wadah pengembangan generasi muda di DK Kriyan, Babadan, Karangdowo, Klaten. 
-      Tujuan utama kami adalah membina, memberdayakan, dan meningkatkan peran pemuda dalam kegiatan sosial, pendidikan, keagamaan, serta pembangunan masyarakat.
-    </p>
-  </section>
-
-  <!-- KEGIATAN -->
-  <section id="kegiatan" class="kegiatan fade-in">
-    <h2>Kegiatan</h2>
-    <div class="card-container">
-      <div class="card">
-        <h3>Lomba</h3>
-        <p>Berbagai lomba kreatifitas dan olahraga untuk mempererat kebersamaan pemuda.</p>
-        <a href="https://drive.google.com/drive/folders/1V27ewNX5XR0MV-2hN-hKZK-AvtRM0sWv" target="_blank" class="btn-download">Download</a>
-      </div>
-      <div class="card">
-        <h3>Jalan Sehat 2024</h3>
-        <p>Acara jalan sehat bersama masyarakat untuk menjaga kebugaran dan kekompakan.</p>
-        <a href="https://drive.google.com/drive/folders/1V27ewNX5XR0MV-2hN-hKZK-AvtRM0sWv" target="_blank" class="btn-download">Download</a>
-      </div>
-      <div class="card">
-        <h3>Nuzulul Qur’an 2025</h3>
-        <p>Peringatan Nuzulul Qur’an dengan kegiatan keagamaan dan kebersamaan warga.</p>
-        <a href="https://drive.google.com/drive/folders/1V27ewNX5XR0MV-2hN-hKZK-AvtRM0sWv" target="_blank" class="btn-download">Download</a>
-      </div>
-      <div class="card">
-        <h3>Jalan Sehat 2025</h3>
-        <p>Jalan sehat tahunan yang diikuti pemuda dan masyarakat dengan semangat kebangsaan.</p>
-        <a href="https://drive.google.com/drive/folders/1WjW9YTXnrOJnW3L8kiMX5IIYYrHQx5sW?usp=drive_link" target="_blank" class="btn-download">Download</a>
-      </div>
+    <div class="card">
+      <h3>Jalan Sehat</h3>
+      <p>Menjaga kesehatan dan kebersamaan warga.</p>
     </div>
-  </section>
+    <div class="card">
+      <h3>Kegiatan Keagamaan</h3>
+      <p>Mempererat nilai spiritual dan kebersamaan.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- KONTAK -->
-  <section id="kontak" class="kontak fade-in">
-    <h2>Kontak Kami</h2>
-    <p>Email: <a href="mailto:tunasremaja.kriyan@gmail.com">tunasremaja.kriyan@gmail.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/tunasrema" target="_blank">@tunasremaja.kriyan</a></p>
-  </section>
+<!-- GALERI -->
+<section id="galeri">
+  <h2>Galeri</h2>
+  <div class="gallery">
+    <img src="img1.jpg">
+    <img src="img2.jpg">
+    <img src="img3.jpg">
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Karang Taruna Tunas Remaja - By wasisyoga</p>
-  </footer>
+<!-- CTA -->
+<section class="cta">
+  <h2>Gabung Bersama Kami</h2>
+  <a href="#" class="btn">Daftar Sekarang</a>
+</section>
+
+<!-- KONTAK -->
+<section id="kontak">
+  <h2>Kontak</h2>
+  <p>Email: tunasremaja.kriyan@gmail.com</p>
+  <p>Instagram: @tunasremaja.kriyan</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Karang Taruna Tunas Remaja</p>
+</footer>
 
 </body>
 </html>
