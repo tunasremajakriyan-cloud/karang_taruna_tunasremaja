@@ -13,11 +13,12 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 8%;
   background: white;
   position: sticky;
   top: 0;
-  border-bottom: 1px solid #eee;
+  z-index: 1000;
 }
 
 .logo {
@@ -40,6 +41,13 @@ body {
   text-decoration: none;
   color: #333;
   font-weight: 600;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 /* HERO */
@@ -65,6 +73,11 @@ body {
   background: gold;
   color: black;
   border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: orange;
 }
 
 /* SECTION */
@@ -92,7 +105,7 @@ h2 {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 }
 
 /* GALERI */
@@ -120,9 +133,46 @@ footer {
   padding: 15px;
 }
 
+/* ANIMASI */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1s;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .navbar ul {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    width: 200px;
     display: none;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
   }
 }
