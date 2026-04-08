@@ -15,7 +15,12 @@
     <img src="logo.png">
     <h2>Tunas Remaja</h2>
   </div>
-  <nav>
+
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+  <nav id="nav-menu">
     <ul>
       <li><a href="#about">Tentang</a></li>
       <li><a href="#kegiatan">Kegiatan</a></li>
@@ -27,7 +32,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
+  <div class="hero-content fade-in">
     <h1>Karang Taruna Tunas Remaja</h1>
     <p>Berkarya untuk Desa, Membangun Generasi Muda</p>
     <a href="#kegiatan" class="btn">Lihat Kegiatan</a>
@@ -35,7 +40,7 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about">
+<section id="about" class="fade-in">
   <h2>Tentang Kami</h2>
   <p>
     Karang Taruna Tunas Remaja adalah wadah pengembangan generasi muda di Kriyan.
@@ -44,7 +49,7 @@
 </section>
 
 <!-- KEGIATAN -->
-<section id="kegiatan" class="kegiatan">
+<section id="kegiatan" class="kegiatan fade-in">
   <h2>Kegiatan</h2>
   <div class="cards">
     <div class="card">
@@ -63,7 +68,7 @@
 </section>
 
 <!-- GALERI -->
-<section id="galeri">
+<section id="galeri" class="fade-in">
   <h2>Galeri</h2>
   <div class="gallery">
     <img src="img1.jpg">
@@ -73,13 +78,13 @@
 </section>
 
 <!-- CTA -->
-<section class="cta">
+<section class="cta fade-in">
   <h2>Gabung Bersama Kami</h2>
   <a href="#" class="btn">Daftar Sekarang</a>
 </section>
 
 <!-- KONTAK -->
-<section id="kontak">
+<section id="kontak" class="fade-in">
   <h2>Kontak</h2>
   <p>Email: tunasremaja.kriyan@gmail.com</p>
   <p>Instagram: @tunasremaja.kriyan</p>
@@ -89,6 +94,35 @@
 <footer>
   <p>© 2025 Karang Taruna Tunas Remaja</p>
 </footer>
+
+<!-- SCRIPT -->
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('nav-menu');
+
+  toggle.onclick = () => {
+    menu.classList.toggle('active');
+  };
+
+  // ANIMASI SCROLL
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOptions = {
+    threshold: 0.2
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer){
+    entries.forEach(entry => {
+      if(!entry.isIntersecting) return;
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
 
 </body>
 </html>
