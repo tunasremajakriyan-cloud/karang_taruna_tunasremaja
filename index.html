@@ -16,15 +16,12 @@
     <h2>Tunas Remaja</h2>
   </div>
 
-  <div class="menu-toggle" id="menu-toggle">
-    ☰
-  </div>
+  <div class="menu-toggle" id="menu-toggle">☰</div>
 
   <nav id="nav-menu">
     <ul>
       <li><a href="#about">Tentang</a></li>
       <li><a href="#kegiatan">Kegiatan</a></li>
-      <li><a href="#galeri">Galeri</a></li>
       <li><a href="#kontak">Kontak</a></li>
     </ul>
   </nav>
@@ -33,6 +30,7 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content fade-in">
+    <img src="logo.png" class="hero-logo">
     <h1>Karang Taruna Tunas Remaja</h1>
     <p>Berkarya untuk Desa, Membangun Generasi Muda</p>
     <a href="#kegiatan" class="btn">Lihat Kegiatan</a>
@@ -43,37 +41,27 @@
 <section id="about" class="fade-in">
   <h2>Tentang Kami</h2>
   <p>
-    Karang Taruna Tunas Remaja adalah wadah pengembangan generasi muda di Kriyan.
-    Kami aktif dalam kegiatan sosial, keagamaan, dan pembangunan masyarakat.
+    Karang Taruna Tunas Remaja merupakan wadah generasi muda di Kriyan yang aktif
+    dalam kegiatan sosial, keagamaan, dan pembangunan masyarakat.
   </p>
 </section>
 
 <!-- KEGIATAN -->
-<section id="kegiatan" class="kegiatan fade-in">
+<section id="kegiatan" class="fade-in">
   <h2>Kegiatan</h2>
   <div class="cards">
     <div class="card">
       <h3>Lomba</h3>
-      <p>Kegiatan lomba untuk meningkatkan kreativitas pemuda.</p>
+      <p>Meningkatkan kreativitas pemuda melalui berbagai lomba.</p>
     </div>
     <div class="card">
       <h3>Jalan Sehat</h3>
-      <p>Menjaga kesehatan dan kebersamaan warga.</p>
+      <p>Menjaga kesehatan dan kebersamaan masyarakat.</p>
     </div>
     <div class="card">
       <h3>Kegiatan Keagamaan</h3>
-      <p>Mempererat nilai spiritual dan kebersamaan.</p>
+      <p>Mempererat nilai spiritual dan kebersamaan warga.</p>
     </div>
-  </div>
-</section>
-
-<!-- GALERI -->
-<section id="galeri" class="fade-in">
-  <h2>Galeri</h2>
-  <div class="gallery">
-    <img src="img1.jpg">
-    <img src="img2.jpg">
-    <img src="img3.jpg">
   </div>
 </section>
 
@@ -104,24 +92,17 @@
     menu.classList.toggle('active');
   };
 
-  // ANIMASI SCROLL
   const faders = document.querySelectorAll('.fade-in');
 
-  const appearOptions = {
-    threshold: 0.2
-  };
-
-  const appearOnScroll = new IntersectionObserver(function(entries, observer){
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if(!entry.isIntersecting) return;
-      entry.target.classList.add('show');
-      observer.unobserve(entry.target);
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      }
     });
-  }, appearOptions);
-
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
   });
+
+  faders.forEach(el => observer.observe(el));
 </script>
 
 </body>
