@@ -31,30 +31,29 @@ body {
   width: 40px;
 }
 
-.navbar ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
-}
-
-/* HAMBURGER */
+/* MENU */
 .menu-toggle {
   display: none;
   font-size: 24px;
   cursor: pointer;
 }
 
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
 /* HERO */
 .hero {
   height: 90vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url('hero.jpg') center/cover;
+  background: linear-gradient(135deg, #b22222, #ffcc00);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,32 +61,29 @@ body {
   color: white;
 }
 
+.hero-logo {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
 }
 
 .btn {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 25px;
-  background: gold;
-  color: black;
+  background: white;
+  color: #b22222;
   border-radius: 30px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: orange;
+  font-weight: 600;
 }
 
 /* SECTION */
 section {
   padding: 60px 10%;
   text-align: center;
-}
-
-h2 {
-  margin-bottom: 20px;
 }
 
 /* CARDS */
@@ -106,18 +102,6 @@ h2 {
 
 .card:hover {
   transform: translateY(-8px);
-}
-
-/* GALERI */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 10px;
-}
-
-.gallery img {
-  width: 100%;
-  border-radius: 10px;
 }
 
 /* CTA */
@@ -167,12 +151,11 @@ footer {
     display: flex;
   }
 
-  .navbar ul {
+  nav ul {
     flex-direction: column;
-    gap: 15px;
   }
 
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 }
